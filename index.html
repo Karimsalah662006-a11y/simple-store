@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <script src="js/bootstrap.bundle.js"></script>
+    <title>HBA| SIMPLE STORE</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="logo.png" alt="Logo" width="200"  class="d-inline-block align-text-top me-2">
+    </a>
+    
+    <div class="d-flex">
+        <span class="badge bg-dark rounded-pill p-2">🛒 <span id="cart-count">0</span></span>
+    </div>
+  </div>
+</nav>
+    <h1 class="text-center mt-5 text-dark-emphasis fs-1 lead">
+      Hello, welcome to a simple basic store
+    </h1>
+    <div class="container my-5 pb-5">
+    <hr>
+    <h2 class="text-center mb-4">Shopping Cart</h2>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                </tbody>
+            <tfoot>
+                <tr>
+                    <td class="fw-bold">Total:</td>
+                    <td colspan="2" class="fw-bold text-success" id="total-price">0$</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <button class="btn btn-dark w-100" onclick="checkout()">Checkout Now</button>
+    <div class="cart-container">
+    <h4 class="text-center mb-3">My Cart 🛒</h4>
+    <div class="table-responsive">
+        <table class="table">
+            <tbody id="cart-items">
+                </tbody>
+        </table>
+    </div>
+    <div class="d-flex justify-content-between fw-bold mb-3 px-2">
+        <span>Total:</span>
+        <span id="total-price" class="text-success">0$</span>
+    </div>
+    <button class="btn btn-dark w-100 rounded-pill" onclick="checkout()">Checkout</button>
+</div>
+</div>
+    <div class="container mt-5">
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm">
+            <img src="hoddies.jpeg" alt="hoddie" />
+            <div class="card-body d-flex flex-column align-items-center">
+              <h5 class="text-center mt-2 fs-4">HBA-HODDIE</h5>
+              <p class="text-center small">
+                felx on the winter under the rain with this hoddie
+              </p>
+              <button class="btn btn-dark mt-auto w-100">100$</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm ">
+            <img src="jacket.png" alt="jacket" />
+            <div class="card-body d-flex flex-column align-items-center">
+              <h5 class="text-center mt-2 fs-4">HBA-jacket</h5>
+              <p class="text-center small">
+                flex on the winter under the rain with this jacket
+              </p>
+              <button class="btn btn-dark mt-auto w-100 ">100$</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 ">
+          <div class="card h-100 shadow-sm">
+            <img src="pants.png" alt="pants" />
+            <div class="card-body d-flex flex-column align-items-center">
+              <h5 class="text-center mt-2 fs-4">HBA-pants</h5>
+              <p class="text-center small">
+                flex on the winter under the rain with this pants
+              </p>
+              <button class="btn btn-dark mt-auto w-100">100$</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm">
+            <img src="shirt.png" alt="shirt" />
+            <div class="card-body d-flex flex-column align-items-center">
+              <h5 class="text-center mt-2 fs-4">HBA-shirt</h5>
+              <p class="text-center small">
+                flex in front of this mirror with hba-shirt
+              </p>
+              <button class="btn btn-dark mt-auto w-100">100$</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm">
+            <img src="red.png" alt="stirk_pants" />
+            <div class="card-body d-flex flex-column align-items-center">
+              <h5 class="text-center mt-2 fs-4">strike-pants</h5>
+              <p class="text-center small">
+                flex in front of this mirror with hba-pants
+              </p>
+              <button class="btn btn-dark mt-auto w-100">100$</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm">
+            <img src="black.png" alt="shirt" />
+            <div class="card-body d-flex flex-column align-items-center">
+              <h5 class="text-center mt-2 fs-4">HBA-shirt</h5>
+              <p class="text-center lead">
+                flex in front of this mirror with hba-shirt
+              </p>
+              <button class="btn btn-dark mt-auto w-100">100$</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm">
+            <img src="cut.png" alt="cut" />
+            <div class="card-body d-flex flex-column align-items-center">
+              <h5 class="text-center mt-2 fs-4">HBA-cut</h5>
+              <p class="text-center small">
+                flex in front of this mirror with hba-cut
+              </p>
+              <button class="btn btn-dark mt-auto w-100">100$</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm">
+            <img src="pump-cover.png" alt="shirt" />
+            <div class="card-body d-flex flex-column align-items-center">
+              <h5 class="text-center mt-2 fs-4">pump-cover</h5>
+              <p class="text-center lead">
+                cover your pump with hba-pump cover
+              </p>
+              <button class="btn btn-dark mt-auto w-100">100$</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm">
+            <img src="ghost.png" alt="shirt" />
+            <div class="card-body d-flex flex-column align-items-center">
+              <h5 class="text-center mt-2 fs-4">HBA-comprisson</h5>
+              <p class="text-center small">
+                cover your pump with hba-pump cover
+              </p>
+              <button class="btn btn-dark mt-auto w-100">100$</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm">
+            <img src="short_sleeve.png" alt="shirt" />
+            <div class="card-body d-flex flex-column align-items-center">
+              <h5 class="text-center mt-2 fs-4">HBA-comprisson</h5>
+              <p class="text-center small">
+                cover your pump with hba-pump cover
+              </p>
+              <button class="btn btn-dark mt-auto w-100">100$</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
